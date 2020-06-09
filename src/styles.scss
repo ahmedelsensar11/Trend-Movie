@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+
+$bgColor : #13151f;
+$textColor:#eceef1;
+$starColor:#fece50; 
+$fontFamily:'segoe ui ligth' !important;
+$bgGradient:linear-gradient(135deg ,#f09819 0%, #ef8128 34%, #ec474c 64% ,#d38083 100%);
+
+@mixin boxShadow($x ,$y ,$b ,$color) {
+  -webkit-box-shadow:$x $y $b $color;
+  -moz-box-shadow:$x $y $b $color;
+  -ms-box-shadow:$x $y $b $color;  
+  -o-box-shadow:$x $y $b $color;
+  box-shadow:$x $y $b $color;
+}
+
+body
+{
+    background-color: $bgColor;
+    font-family: $fontFamily !important;
+}

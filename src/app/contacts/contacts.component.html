@@ -1,0 +1,44 @@
+<h2>{{dataControl.userName.errors |json}}</h2>
+
+<div class="container">
+    <form [formGroup]='userData' class="mt-4" (ngSubmit)='saveForm()'>
+
+        <div class="form-group w-50">
+            <label for="">userName</label>
+            <input type="text" class="form-control" formControlName='userName' placeholder="your name">
+            <div *ngIf="dataControl.userName.touched && dataControl.userName.errors != null"
+                class="alert alert-danger mt-2" role="alert">
+                user name length must be > 3
+            </div>
+        </div>
+
+        <div class="form-group w-50">
+            <label for="">userAge</label>
+            <input type="number" class="form-control" formControlName='userAge' placeholder="your age">
+            <div *ngIf="dataControl.userAge.touched && dataControl.userAge.errors != null"
+                class="alert alert-danger mt-2" role="alert">
+                user age must be between 10-60 years
+            </div>
+        </div>
+
+        <div class="form-group w-50">
+            <label for="">userMail</label>
+            <input type="email" class="form-control" formControlName='userMail' placeholder="your mail">
+            <div *ngIf="dataControl.userMail.touched && dataControl.userMail.errors != null"
+                class="alert alert-danger mt-2" role="alert">
+                enter a valid e-mail
+            </div>
+        </div>
+
+        <div class="form-group w-50">
+            <label for="">userPassword</label>
+            <input type="password" class="form-control" formControlName='userPassword' placeholder="your password">
+            <div *ngIf="dataControl.userPassword.touched && dataControl.userPassword.errors != null"
+                class="alert alert-danger mt-2" role="alert">
+                enter a valid Password
+            </div>
+        </div>
+
+        <button type="submit" [disabled]='userData.invalid' class="btn btn-primary">Register</button>
+    </form>
+</div>

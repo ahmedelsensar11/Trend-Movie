@@ -1,0 +1,23 @@
+@import '../../styles.scss';
+
+
+
+.movie-card
+{
+    @include boxShadow(0px, 0px, 20px, black) ;
+    color: $textColor;
+    background-color: $bgColor;
+}
+.vote
+{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    padding: 8px;
+    background-color: crimson;
+}
+.rateStar
+{
+    color: $starColor;
+    font-size: 13px;
+}
